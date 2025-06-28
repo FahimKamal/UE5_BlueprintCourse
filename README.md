@@ -24,35 +24,38 @@ This Unreal Engine **5.5.1** project serves as a dedicated, hands-on workspace f
 This repository will showcase:
 *   Implementations of course-specific exercises and challenges.
 *   Experimentation with diverse Blueprint nodes, logic flows, and communication patterns.
-*   Small, focused prototypes demonstrating core gameplay mechanics (e.g., interactive objects, character abilities, UI elements, data management, etc., as covered throughout the course modules).
+*   Small, focused prototypes demonstrating core gameplay mechanics.
 
 ---
 
-## 📚 Modules & Learning Log (Work in Progress)
+## 📚 Modules & Implemented Projects
 
-This section will be updated incrementally as I, Fahim Kamal Ahmed, progress through the course modules and complete the associated exercises and projects. Detailed descriptions and key learnings for specific tasks will be added upon their completion and integration into this repository.
+This section highlights the major practical projects completed for each course module.
 
-*   **Module 1: Blueprint Fundamentals & Interactive Door (Part 1)**
-    *   Status: *Currently In Progress*
-    *   Focus: Core Blueprint concepts, editor interface, variables, functions, event-driven logic, initial project setup for an interactive element.
-    *   Completed Lessons So Far:
-        *   ✅ 001: Introduction
-        *   ✅ 002: Blueprint Interface
-        *   ✅ 003: Blueprints as Designer Tools
-        *   ✅ 004: Strengths and Limitations of Blueprints
-        *   ✅ 005: Reading Nodes
-    *   *Upcoming: Exercises related to the interactive door challenge.*
+*   **Module 1: Blueprint Fundamentals & Interactive Elements**
+    *   **Status:** ✅ Completed
+    *   **Project: Interactive Door & Trigger System**
+        *   Developed a `BP_Door` and a parent `BP_Trigger` class with three child variations: `BP_PressurePad`, `BP_Button`, and `BP_Lever`.
+        *   The door system features an instance-editable `IsLocked` state and a configurable opening direction (Sideways or Up/Down) using an Enumeration.
+        *   Visual feedback is provided via a dynamic emissive material on the door (Red for locked, Green for unlocked).
+        *   This project demonstrates a robust, configurable, and reusable set of interactive elements.
+    *   **Key Concepts Applied:** Actor Components, Variables (Boolean, Enum, Object Reference), Instance Editable Properties, Custom Events & Functions, Timelines, Event Dispatchers, Inheritance, Logic & Flow Control, Construction Script, Dynamic Material Instances.
 
-*   **Module 2: Blueprint Communication & Interactive Elements**
-    *   Status: *Not Yet Started*
-    *   Focus: Traces, interfaces, casting, advanced trigger mechanisms.
+*   **Module 2: Blueprint Communication & Advanced Triggers**
+    *   **Status:** ✅ Completed
+    *   **Challenge Project: Self-Contained Elevator**
+        *   Created a `BP_Lift` as a child of the `BP_Trigger` class, demonstrating inheritance and system reuse.
+        *   The elevator platform includes railings and a self-contained lever for activation.
+        *   When the player interacts with the lever (via the Interaction Interface), the lever animates first. Upon completion of the lever's animation, the main platform begins its movement.
+        *   The elevator's destination is determined by the position of a hidden "Roof" static mesh component, allowing for easy adjustment of travel height directly in the editor. The elevator returns to the world origin when toggled again.
+    *   **Key Concepts Applied:** Advanced Component Hierarchy (using Scene Components as pivots), Stateful Logic (tracking up/down state), Sequential Animation (lever then platform), Traces, Interfaces, and combining multiple learned systems into a single, functional gameplay mechanic.
 
 *   **Module 3: Characters, Cameras & Controls**
-    *   Status: *Not Yet Started*
+    *   **Status:** 🔄 In Progress / Current Focus
     *   Focus: Player character setup, camera controls, Enhanced Input system.
 
 *   **Module 4: Gameplay Mechanics & Inventory System Example (Escape Room Capstone)**
-    *   Status: *Not Yet Started*
+    *   **Status:** ⏳ Not Yet Started
     *   Focus: Data Assets, UI (UMG), gameplay systems (e.g., inventory), capstone project development.
 
 *(Emoji Legend: ✅ Complete, 🔄 In Progress / Current Focus, ⏳ Not Yet Started)*
